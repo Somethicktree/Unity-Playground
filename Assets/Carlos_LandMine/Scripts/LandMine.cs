@@ -16,7 +16,7 @@ public class LandMine : MonoBehaviour
             Debug.Log("MINE EXPLODE");
             mineExplosion?.Invoke();
             Destroy(this.gameObject);
-            Destroy(player);
+            //Destroy(player);
         }
     }
 }
