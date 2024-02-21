@@ -76,7 +76,7 @@ public class Predator : WolfStates
 
         if (currentChaseTarget)
             currentChaseTarget.RecieveDamage(biteDamage);
-        anim.Play("bite");
+        //anim.Play("bite");
 
         yield return new WaitForSeconds(biteCoolDown);
 

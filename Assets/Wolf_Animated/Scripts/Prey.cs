@@ -38,6 +38,7 @@ public class Prey : WolfStates
         if(!navMeshAgent.pathPending && navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
         {
             yield return null;
+            
         }
 
         SetState(WolfState.Idle);

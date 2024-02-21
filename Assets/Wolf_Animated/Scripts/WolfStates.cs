@@ -45,11 +45,6 @@ public class WolfStates : MonoBehaviour
 
         currentState = WolfState.Idle;
 
-        if (WolfState.Idle == currentState)
-        {
-            anim.SetTrigger("idle");
-        }
-
         UpdateState();
     }
 
@@ -63,10 +58,10 @@ public class WolfStates : MonoBehaviour
                 break;
             case WolfState.Moving:
                 HandleMovingState();
-                anim.SetTrigger("run");
+                
                 break;
             case WolfState.Chase:
-                anim.SetTrigger("run");
+                
                 HandleChaseState();
                 break;
         }
@@ -138,6 +133,7 @@ public class WolfStates : MonoBehaviour
             if (Time.time - startTime >= maxWalkTime)
             {
                 navMeshAgent.ResetPath();
+                Debug.Log("Idling");
                 SetState(WolfState.Idle);
                 yield break;
             }
@@ -149,7 +145,7 @@ public class WolfStates : MonoBehaviour
 
         //Destination has been reached
         //Do something when you reach dest here
-
+        Debug.Log("Idling 1");
         SetState(WolfState.Idle);
     }
 
