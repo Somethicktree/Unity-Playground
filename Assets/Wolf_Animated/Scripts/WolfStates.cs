@@ -31,10 +31,48 @@ public class WolfStates : MonoBehaviour
     protected Animator anim;
     protected WolfState currentState = WolfState.Idle;
 
+    private bool isIdle = true;
+    private bool isWalking = false;
+    private bool isRunning = false;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
         InitializeWolf();
+    }
+
+    private void Update()
+    {
+        if (walkSpeed > 0 && currentState == WolfState.Moving)
+        {
+            isWalking = true;
+            isIdle = false; 
+            isRunning = false;
+            anim.SetTrigger("walk");
+            anim.ResetTrigger("idle");
+            anim.ResetTrigger("run");
+        }
+        else if (runSpeed > 0 && currentState == WolfState.Chase)
+        {
+            isRunning = true;
+            isIdle = false;
+            isWalking = false;
+            anim.SetTrigger("run");
+            anim.ResetTrigger("walk");
+            anim.ResetTrigger("idle");
+        }
+        else if(idleTime > 0 && currentState == WolfState.Idle)
+        {
+            isIdle = true;
+            isWalking = false;
+            isRunning = false;
+            anim.SetTrigger("idle");
+            anim.ResetTrigger("walk");
+            anim.ResetTrigger("run");
+        }
+        
+
+        
     }
 
     protected virtual void InitializeWolf()
@@ -98,8 +136,7 @@ public class WolfStates : MonoBehaviour
 
     protected virtual void HandleIdleState()
     {
-        //anim.ResetTrigger("run");
-        //anim.SetTrigger("idle");
+        
 
         StartCoroutine(WaitToMove());
     }
@@ -162,7 +199,7 @@ public class WolfStates : MonoBehaviour
     protected virtual void OnStateChanged(WolfState newState)
     {
 
-        anim?.CrossFadeInFixedTime(newState.ToString(), 0.5f);
+        //anim?.CrossFadeInFixedTime(newState.ToString(), 0.5f);
 
         if (newState == WolfState.Moving)
             navMeshAgent.speed = walkSpeed;
