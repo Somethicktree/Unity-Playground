@@ -9,6 +9,8 @@ public class WolfAI : MonoBehaviour
     public Transform player;
     public Animator aiAnim;
 
+    float delay = 4.0f;
+
     Vector3 dest;
 
     void Update()
@@ -27,6 +29,21 @@ public class WolfAI : MonoBehaviour
             aiAnim.SetTrigger("run");
         }
 
+        StartCoroutine(WaitFunction(delay));
        
+    }
+
+    //float delay = 4.0f;
+
+    IEnumerator WaitFunction(float delayTime)
+
+    {
+
+        delayTime += 2.0f;
+
+        yield return null;
+
+        Debug.Log("I am a debug log!");
+
     }
 }
