@@ -49,7 +49,7 @@ public class FirstPersonMovement : MonoBehaviour
         // Apply movement.
         rb.velocity = transform.rotation * new Vector3(targetVelocity.x, rb.velocity.y, targetVelocity.y);
 
-        StepClimb();
+        //StepClimb();
     }
 
     void StepClimb()

@@ -21,11 +21,11 @@ public class WolfAI : MonoBehaviour
         if(aI.remainingDistance <= aI.stoppingDistance)
         {
             aiAnim.ResetTrigger("run");
-            aiAnim.SetTrigger("bite");
+            aiAnim.SetTrigger("idle");
         }
         else
         {
-            aiAnim.ResetTrigger("bite");
+            aiAnim.ResetTrigger("idle");
             aiAnim.SetTrigger("run");
         }
 
