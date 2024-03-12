@@ -15,6 +15,7 @@ public class LeverDoor : MonoBehaviour
     public void OpenDoor()
     {
         Debug.Log("Opening Door");
+        audio_manager.Instance.Play("DoorCreek");
         _Anim.SetTrigger("DoorTrigger");
     }
 

@@ -28,7 +28,7 @@ public class DoorController : MonoBehaviour
             _Anim.SetTrigger("DoorTrigger");
 
             doorIsOpen = false;
-            //audio_manager.Instance.Play("DoorClose");
+            audio_manager.Instance.Play("DoorClose");
         }
     }
 
@@ -36,8 +36,10 @@ public class DoorController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //audio_manager.Instance.Play("DoorCreak");
+            
             _Anim.SetTrigger("DoorTrigger");
+
+            audio_manager.Instance.Play("DoorCreek");
         }
     }
 

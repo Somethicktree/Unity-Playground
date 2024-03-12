@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEditor.Rendering.InspectorCurveEditor;
+
 
 public enum WolfState
 {
