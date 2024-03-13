@@ -8320,6 +8320,15 @@ MonoBehaviour:
     Min3D_Distance: 0
     loop: 0
     source: {fileID: 0}
+  - name: Bark
+    clip: {fileID: 8300000, guid: 37540cd32b9d78c41a840f0e591ea7e9, type: 3}
+    AudioMixerGroup: {fileID: 0}
+    volume: 0.546
+    pitch: 0.74
+    spatialBlend: 0
+    Min3D_Distance: 0
+    loop: 0
+    source: {fileID: 0}
   bgMusicPlaying: 0
 --- !u!4 &353560177
 Transform:
@@ -18236,6 +18245,33 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!95 &776912104 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8881993213821397876, guid: 771faebeaf31bb1439d87c197f41cc6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5533916967750264416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &776912107 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 5093261061104938307, guid: 771faebeaf31bb1439d87c197f41cc6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5533916967750264416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &776912109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776912097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95fbf26d071121439568eb9d25f16d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aI: {fileID: 776912107}
+  player: {fileID: 8826077293311161534}
+  aiAnim: {fileID: 776912104}
 --- !u!1001 &777553242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41901,9 +41937,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a277fe19d7284354190916307849cc11, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
-  m_Pitch: 1
-  Loop: 0
+  m_Volume: 0.1
+  m_Pitch: 0.47
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -50316,7 +50352,8 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.29
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 744225049368409985, guid: 771faebeaf31bb1439d87c197f41cc6d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -50324,6 +50361,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 776912103}
+    - targetCorrespondingSourceObject: {fileID: 144559405669730839, guid: 771faebeaf31bb1439d87c197f41cc6d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 776912109}
   m_SourcePrefab: {fileID: 100100000, guid: 771faebeaf31bb1439d87c197f41cc6d, type: 3}
 --- !u!1 &5537856544287103193
 GameObject:

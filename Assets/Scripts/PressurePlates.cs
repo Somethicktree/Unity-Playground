@@ -10,7 +10,7 @@ public class PressurePlates : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Collided");
+            //Debug.Log("Collided");
             door.OpenDoor();
         }
     }

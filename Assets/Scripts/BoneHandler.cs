@@ -48,7 +48,7 @@ public class BoneHandler : MonoBehaviour
 
         if (Input.GetKeyDown("e") && !isHolding && hit.transform.position == transform.position)
         {
-            //audio_manager.Instance.Play("PickUp");
+            audio_manager.Instance.Play("Bark");
 
             transform.SetParent(tempParent.transform);
             GetComponent<Rigidbody>().velocity = Vector3.zero;

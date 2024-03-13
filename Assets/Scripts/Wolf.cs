@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class WolfAI : MonoBehaviour
+public class Wolf : MonoBehaviour
 {
     public NavMeshAgent aI;
     public Transform player;
@@ -17,7 +17,7 @@ public class WolfAI : MonoBehaviour
         dest = player.position;
         aI.destination = dest;
 
-        if(aI.remainingDistance <= aI.stoppingDistance)
+        if (aI.remainingDistance <= aI.stoppingDistance)
         {
             aiAnim.ResetTrigger("run");
             aiAnim.SetTrigger("idle");
@@ -28,9 +28,8 @@ public class WolfAI : MonoBehaviour
             aiAnim.SetTrigger("run");
         }
 
-        
-       
+
+
     }
 
-    
 }

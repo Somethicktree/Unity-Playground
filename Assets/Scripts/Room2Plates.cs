@@ -10,7 +10,7 @@ public class Room2Plates : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Dog"))
         {
-            Debug.Log("Second Door Collide");
+            //Debug.Log("Second Door Collide");
             door.OpenDoor();
         }
     }
