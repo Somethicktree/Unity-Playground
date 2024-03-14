@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject loseUI;
     [SerializeField] GameObject winUI;
     [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject h2p;
     public GameObject crosshairs;
 
     public FirstPersonMovement player;
@@ -70,5 +71,15 @@ public class GameManager : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void H2P()
+    {
+        h2p.SetActive(true);
+    }
+
+    public void CloseH2P()
+    {
+        h2p.SetActive(false);
     }
 }
