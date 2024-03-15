@@ -117,3 +117,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 4974516215925233588, guid: 69fcec91b18716949890f3ad122be5a1,
     type: 3}
+  player: {fileID: 0}

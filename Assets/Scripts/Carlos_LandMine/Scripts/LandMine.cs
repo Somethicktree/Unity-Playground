@@ -41,6 +41,7 @@ public class LandMine : MonoBehaviour
             manager.Lost();
 
             Destroy(this.gameObject);
+            //Destroy(player);
         }
     }
 }
