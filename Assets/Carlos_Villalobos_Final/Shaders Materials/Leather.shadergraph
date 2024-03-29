@@ -682,6 +682,9 @@
             "m_Id": "749294b918b64b1983fcda1db10c0aff"
         },
         {
+            "m_Id": "ff471e811ce34df3b494b7c18a5e47d6"
+        },
+        {
             "m_Id": "ad01a93e62d74cbe92106af264970804"
         },
         {
@@ -703,12 +706,14 @@
     "m_PropertyGuids": [
         "9c0fbb63-0940-4b17-ab1e-cd98787fe863",
         "e80ae951-eb04-45e2-a472-176661402a1f",
-        "ab5cdba6-a3c5-4aa3-b8cc-7582fab56f95"
+        "ab5cdba6-a3c5-4aa3-b8cc-7582fab56f95",
+        "4e14c683-30f5-42b9-b93b-de23a789f1ad"
     ],
     "m_PropertyIds": [
         742249456,
         -724225904,
-        -152764127
+        -152764127,
+        -2105392024
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
@@ -2442,5 +2447,26 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
+    "m_ObjectId": "ff471e811ce34df3b494b7c18a5e47d6",
+    "m_Id": -2105392024,
+    "m_DisplayName": "Speed",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Speed",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.20000000298023225,
+        "y": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "m_Labels": []
 }
 
